@@ -86,3 +86,29 @@ section p {
 .meeting-table a:hover {
     text-decoration: underline;
 }
+
+/* 홈페이지 하단 */
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 12px; /* 작은 글씨 */
+  color: #555;
+}
+
+.footer-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
