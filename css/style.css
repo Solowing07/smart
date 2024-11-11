@@ -87,10 +87,15 @@ section p {
     text-decoration: underline;
 }
 
-
+ #warp {
+        min-height: 100%;
+        position: relative;
+        padding-bottom: 60px
+    
 }
 
 footer {
+    bottom: 0;
     heigth : 60px;
     position : relative;
     transform : translateY(0%);
