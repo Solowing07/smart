@@ -87,7 +87,17 @@ section p {
     text-decoration: underline;
 }
 
+    
+
 /* 홈페이지 하단 */
+.wrap-container {
+    height : auto;
+    min-height : 100%;
+    padding-bootom : 60px;
+}
+.home-container {
+    min-height : 600px;
+}
 
 footer {
     heigth : 60px;
