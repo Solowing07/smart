@@ -100,11 +100,13 @@ footer {
     position : relative;
     transform : translateY(0%);
     border-top : 1px solid #248efe;
-
+    
     display: flex;
     align-items : center;
     justify-content: center;
     background-color : #62679b
+
+    margin-top: 60px
     /*height : 60px;
   background-color: #f1f1f1;
   padding: 20px 0;
