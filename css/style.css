@@ -90,12 +90,22 @@ section p {
 /* 홈페이지 하단 */
 
 footer {
+    heigth : 60px;
+    position : relative;
+    transform : translateY(0%);
+    border-top : 1px solid #248efe;
+
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    background-color : #62679b
+    /*height : 60px;
   background-color: #f1f1f1;
   padding: 20px 0;
   text-align: center;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100%;*/
 }
 
 .footer-content {
