@@ -86,3 +86,53 @@ section p {
 .meeting-table a:hover {
     text-decoration: underline;
 }
+
+.warp {
+        min-height: 100%;
+        position: relative;
+        padding-bottom: 60px
+    
+}
+
+footer {
+    bottom: 0;
+    heigth : 60px;
+    position : relative;
+    transform : translateY(0%);
+    border-top : 1px solid #248efe;
+    
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    background-color : #62679b
+
+    /*height : 60px;
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;*/
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 12px; 
+  color: #555;
+}
+
+.footer-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
