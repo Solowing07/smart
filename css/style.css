@@ -1,6 +1,8 @@
 /* ============================ */
-/* 기본 스타일 초기화 및 설정 */
+/* 기본 스타일 및 웹 폰트 설정 */
 /* ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +10,11 @@
 }
 
 body {
-    font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
-    background-color: #f0f2f5; /* 전체 배경색을 밝은 회색으로 설정 */
-    color: #333;
-    line-height: 1.8;
+    font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background-color: #f8f9fa; /* 부드러운 회색 배경 */
+    color: #212529; /* 높은 가독성의 진한 회색 텍스트 */
+    line-height: 1.7;
+    font-weight: 400;
 }
 
 /* ============================ */
@@ -19,57 +22,83 @@ body {
 /* ============================ */
 header {
     text-align: center;
-    padding: 80px 20px;
-    background-color: #007bff; /* 밝은 파란색으로 변경 */
+    padding: 60px 20px;
+    background: linear-gradient(to right, #4a69bd, #1e3799); /* 세련된 그라데이션 */
     color: white;
-    border-bottom: 5px solid #0056b3; /* 진한 파란색 하단 테두리 */
 }
 
 header h1 {
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 2.8em;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 header h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #e9ecef;
+    font-weight: 300;
 }
 
 /* ============================ */
 /* 메인 콘텐츠 영역 */
 /* ============================ */
 main {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    padding: 40px;
+    max-width: 960px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07); /* 부드러운 그림자 효과 */
 }
 
 h2 {
-    font-size: 2em;
-    color: #007bff;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #007bff; /* 제목 아래에 밑줄 추가 */
-    padding-bottom: 5px;
+    font-size: 2.2em;
+    color: #1e3799;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e9ecef;
+    font-weight: 500;
+}
+
+h2:first-of-type {
+    margin-top: 0;
 }
 
 p {
     font-size: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 ol, ul {
-    margin-left: 20px;
+    margin-left: 25px;
     margin-bottom: 20px;
 }
 
 ol li, ul li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    padding-left: 5px;
 }
+
+a {
+    color: #4a69bd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1e3799;
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 50px 0;
+}
+
 
 /* ============================ */
 /* 테이블 스타일 (모임안내) */
@@ -78,57 +107,74 @@ ol li, ul li {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden; /* border-radius 적용을 위해 */
 }
 
 .meeting-table th, .meeting-table td {
-    padding: 15px;
-    border: 1px solid #dee2e6;
+    padding: 18px 20px;
+    border: none;
     text-align: left;
+    vertical-align: middle;
 }
 
 .meeting-table th {
-    background-color: #0056b3; /* 헤더 배경색을 진한 파란색으로 */
+    background-color: #4a69bd;
     color: #fff;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
 }
 
-.meeting-table tr:nth-child(even) td {
-    background-color: #f8f9fa; /* 짝수 행에 배경색을 넣어 가독성 높임 */
+.meeting-table tr:nth-child(even) {
+    background-color: #f8f9fa; /* 짝수 행에 부드러운 배경색 */
 }
 
-.meeting-table td a {
-    color: #007bff;
+.meeting-table tr:hover {
+    background-color: #e9ecef; /* 마우스 오버 시 하이라이트 */
+}
+
+/* ============================ */
+/* 도구 다운로드 링크 스타일 */
+/* ============================ */
+ul a[href*="Resources"] {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul a[href*="Resources"]:hover {
+    background-color: #e9ecef;
+    color: #1e3799;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.meeting-table td a:hover {
-    text-decoration: underline;
-}
 
 /* ============================ */
 /* 푸터 스타일 */
 /* ============================ */
 footer {
-    background-color: #343a40; /* 어두운 색상으로 변경 */
-    color: #adb5bd;
-    padding: 20px 0;
+    background-color: #343a40;
+    color: #ced4da;
+    padding: 30px 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
 
 .footer-link {
-    color: #007bff;
+    color: #8cb2ff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-link:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -136,17 +182,27 @@ footer {
 /* 반응형 디자인 */
 /* ============================ */
 @media (max-width: 768px) {
+    main {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
     header h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
     header h2 {
         font-size: 1.2em;
     }
     h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
+
     .meeting-table th, .meeting-table td {
-        padding: 10px;
+        padding: 12px;
         font-size: 0.9em;
     }
 }
