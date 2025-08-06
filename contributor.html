@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기여자 - 한국 스마트 리커버리</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 기여자 페이지 전용 스타일 */
+        .contributors-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .contributor-card {
+            background-color: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .contributor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        .contributor-card h3 {
+            font-size: 1.4em;
+            color: #1e3799;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .contributor-card .role {
+            font-size: 1em;
+            color: #4a69bd;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .contributor-card .affiliation {
+            font-size: 1.05em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>한국 스마트 리커버리</h1>
+        <h2>SMART RECOVERY Korea</h2>
+    </header>
 
+    <main>
+        <h2>기여자</h2>
+        <p>한국 스마트 리커버리 핸드북의 번역과 보급에 기여해주신 분들께 감사드립니다.</p>
+
+        <div class="contributors-container">
+            <div class="contributor-card">
+                <h3>노원구중독관리통합지원센터</h3>
+                <p class="role">참여자 핸드북 번역 및 요약</p>
+                <p class="affiliation">기관</p>
+            </div>
+            <div class="contributor-card">
+                <h3>김용범</h3>
+                <p class="role">스마트리커버리 확산 프로젝트</p>
+                <p class="affiliation">중독포럼</p>
+            </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p> 한국스마트리커버리 | <a href="/contributors" class="footer-link">기여자</a> | <a href="/privacy-policy" class="footer-link">____</a> | <a href="/terms" class="footer-link">____</a></p>
+        </div>
+    </footer>
+</body>
+</html>
