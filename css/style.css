@@ -1,138 +1,152 @@
-/* 기본 스타일 초기화 */
+/* ============================ */
+/* 기본 스타일 초기화 및 설정 */
+/* ============================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 전체 배경 및 텍스트 색상 설정 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+    background-color: #f0f2f5; /* 전체 배경색을 밝은 회색으로 설정 */
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
+/* ============================ */
 /* 헤더 스타일 */
+/* ============================ */
 header {
     text-align: center;
-    padding: 50px 0;
-    background-color: #2c3e50;
+    padding: 80px 20px;
+    background-color: #007bff; /* 밝은 파란색으로 변경 */
     color: white;
+    border-bottom: 5px solid #0056b3; /* 진한 파란색 하단 테두리 */
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 header h2 {
     font-size: 1.5em;
-    color: #ecf0f1;
-    margin-top: 10px;
+    color: #e9ecef;
 }
 
-/* 본문 섹션 스타일 */
+/* ============================ */
+/* 메인 콘텐츠 영역 */
+/* ============================ */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
 }
 
-section p {
+h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* 제목 아래에 밑줄 추가 */
+    padding-bottom: 5px;
+}
+
+p {
     font-size: 1.1em;
-    color: #555;
-    text-align: center;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+ol, ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li, ul li {
+    margin-bottom: 10px;
+}
+
+/* ============================ */
+/* 테이블 스타일 (모임안내) */
+/* ============================ */
 .meeting-table {
     width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
+    margin: 30px 0;
+}
+
+.meeting-table th, .meeting-table td {
+    padding: 15px;
+    border: 1px solid #dee2e6;
     text-align: left;
 }
 
-.meeting-table th,
-.meeting-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-}
-
 .meeting-table th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #0056b3; /* 헤더 배경색을 진한 파란색으로 */
+    color: #fff;
     font-weight: bold;
     text-align: center;
 }
 
-.meeting-table td {
-    background-color: #f9f9f9;
-}
-
 .meeting-table tr:nth-child(even) td {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa; /* 짝수 행에 배경색을 넣어 가독성 높임 */
 }
 
-/* 링크 스타일 */
-.meeting-table a {
-    color: #1a73e8;
+.meeting-table td a {
+    color: #007bff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.meeting-table a:hover {
+.meeting-table td a:hover {
     text-decoration: underline;
 }
 
-.warp {
-        min-height: 100%;
-        position: relative;
-        padding-bottom: 60px
-    
-}
-
+/* ============================ */
+/* 푸터 스타일 */
+/* ============================ */
 footer {
-    bottom: 0;
-    heigth : 60px;
-    position : relative;
-    transform : translateY(0%);
-    border-top : 1px solid #248efe;
-    
-    display: flex;
-    align-items : center;
-    justify-content: center;
-    background-color : #62679b
-
-    /*height : 60px;
-  background-color: #f1f1f1;
-  padding: 20px 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;*/
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    background-color: #343a40; /* 어두운 색상으로 변경 */
+    color: #adb5bd;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
 }
 
 .footer-content p {
-  margin: 0;
-  font-size: 12px; 
-  color: #555;
+    margin: 0;
+    font-size: 0.9em;
 }
 
 .footer-link {
-  color: #007bff;
-  text-decoration: none;
+    color: #007bff;
+    text-decoration: none;
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* ============================ */
+/* 반응형 디자인 */
+/* ============================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header h2 {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .meeting-table th, .meeting-table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
 }
